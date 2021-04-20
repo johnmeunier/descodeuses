@@ -61,6 +61,13 @@ const data = [
   },
 ];
 
+const createTd = (type, value) => {
+  const $el = document.createElement("td");
+  $el.classList.add(`slot__${type}`);
+  $el.innerText = value;
+  return $el;
+};
+
 data.forEach((slot) => {
   const $slot = document.createElement("tr");
   $slot.classList.add("slot");
@@ -77,20 +84,9 @@ data.forEach((slot) => {
     $slot.appendChild($date);
   }
 
-  const $time = document.createElement("td");
-  $time.classList.add("slot__time");
-  $time.innerText = slot.time;
-  $slot.appendChild($time);
-
-  const $topic = document.createElement("td");
-  $topic.classList.add("slot__topic");
-  $topic.innerText = slot.topic;
-  $slot.appendChild($topic);
-
-  const $speaker = document.createElement("td");
-  $speaker.classList.add("slot__speaker");
-  $speaker.innerText = slot.speaker;
-  $slot.appendChild($speaker);
+  $slot.appendChild(createTd("time", slot.time));
+  $slot.appendChild(createTd("topic", slot.topic));
+  $slot.appendChild(createTd("speaker", slot.speaker));
 
   document.querySelector("tbody").appendChild($slot);
 });
