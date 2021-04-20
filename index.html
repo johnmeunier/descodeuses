@@ -7,11 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-    <script src="./script/app.js"></script>
     <title>Document</title>
   </head>
 
-  <body>
+  <body data-theme="light">
     <div class="container">
       <h1>
         Intervention AXA à DesCodeuses
@@ -22,7 +21,7 @@
           <th>Thématique</th>
           <th>Intervenant(e)</th>
         </thead>
-        <tbody data-theme="light">
+        <tbody>
           <tr class="slot" data-date="20/04">
             <th class="slot__date" rowspan="2">mardi 20 avril</th>
             <td class="slot__time">9h30-12h30</td>
@@ -69,8 +68,9 @@
           </tr>
         </tbody>
       </table>
+      <button id="toggleTheme">Activer dark mode</button>
     </div>
-
+    <script src="./script/app.js"></script>
   </body>
 
 </html>
