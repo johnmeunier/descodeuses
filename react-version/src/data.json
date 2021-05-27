@@ -1,0 +1,54 @@
+{
+  "slots": [
+    {
+      "date": "mardi 20 avril",
+      "dateFormated": "20/04",
+      "time": "9h30-12h30"
+    },
+    {
+      "dateFormated": "20/04",
+      "time": "13h30-17h30",
+      "topic": "HTML / CSS et RWD",
+      "speaker": "Johnathan MEUNIER"
+    },
+    {
+      "dateFormated": "27/05",
+      "date": "jeudi 27 mai",
+      "time": "9h30-12h30",
+      "topic": "React JS",
+      "speaker": "Johnathan MEUNIER"
+    },
+    {
+      "dateFormated": "27/05",
+      "time": "13h30-17h30",
+      "topic": "POO/UML",
+      "speaker": "ES SALHI Rachida"
+    },
+    {
+      "date": "lundi 21 juin",
+      "dateFormated": "21/06",
+      "time": "9h30-12h30",
+      "topic": "JAVA",
+      "speaker": "ES SALHI Rachida"
+    },
+    {
+      "dateFormated": "21/06",
+      "time": "13h30-17h30",
+      "topic": "Cybersécurité",
+      "speaker": "Tony GHILAIN"
+    },
+    {
+      "date": "mercredi 7 juillet",
+      "dateFormated": "07/07",
+      "time": "9h30-12h30",
+      "topic": "SQL",
+      "speaker": "Catherine DESMOULINS"
+    },
+    {
+      "time": "13h30-17h30",
+      "dateFormated": "07/07",
+      "topic": "UX/UI",
+      "speaker": "BOY Mari"
+    }
+  ]
+}
