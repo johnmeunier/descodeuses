@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ButtonCustom from "../components/ButtonCustom";
 import Planning from "../components/Planning";
 import { slots as rawSlots } from "../data.json";
@@ -7,10 +7,34 @@ const Home = () => {
   const [newTopic, setNewTopic] = useState("");
   const [newSpeaker, setNewSpeaker] = useState("");
   const [slots, setSlots] = useState(rawSlots);
+  const [filter, setFilter] = useState("");
+
+  useEffect(() => {
+    setSlots(() => {
+      return rawSlots.filter((slot) => {
+        if (filter !== "") {
+          return slot.topic.includes(filter);
+        } else {
+          return true;
+        }
+      });
+    });
+  }, [filter]);
+
   return (
     <div className="home">
       <ButtonCustom> Activer dark mode </ButtonCustom>
       <h2>Votre formation est composé de {slots.length} créneaux.</h2>
+      <label>
+        Filtre :{" "}
+        <input
+          type="text"
+          value={filter}
+          onChange={(e) => {
+            setFilter(e.target.value);
+          }}
+        />
+      </label>
       <Planning slots={slots} />
       <form>
         Notre nouvel événement a pour sujet {newTopic} et en speaker {newSpeaker}.
