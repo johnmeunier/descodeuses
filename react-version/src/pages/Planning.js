@@ -1,7 +1,11 @@
-const PlanningRow = ({ slot, currentDate }) => (
+import { Link } from "react-router-dom";
+
+const PlanningRow = ({ slot, id, currentDate }) => (
   <tr className={`slot ${currentDate === slot.dateFormated ? "slot--today" : ""}`} data-date={slot.dateFormated}>
     <th className="slot__date">{slot.date}</th>
-    <td className="slot__time">{slot.time}</td>
+    <td className="slot__time">
+      <Link to={`/detail/${id}`}>{slot.time}</Link>
+    </td>
     {slot.topic && <td className="slot__topic">{slot.topic}</td>}
     {slot.speaker && <td className="slot__speaker">{slot.speaker}</td>}
   </tr>
@@ -20,8 +24,8 @@ const Planning = ({ slots }) => {
         </tr>
       </thead>
       <tbody>
-        {slots.map((slot) => {
-          return <PlanningRow slot={slot} currentDate={currentDate} />;
+        {slots.map((slot, index) => {
+          return <PlanningRow slot={slot} currentDate={currentDate} id={index} />;
         })}
       </tbody>
     </table>
