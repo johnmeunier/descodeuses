@@ -1,0 +1,22 @@
+:root {
+  --widthTime: 120px;
+  --widthTopic: 200px;
+}
+
+[data-theme="light"] {
+  --primary: #3a3335;
+  --secondary: #d81e5b;
+  --emphasis: #fa7921;
+  --background: #fdf0d5;
+  --backgroundEmphasis: #c6d8d3;
+  --mainBackground: #fff;
+}
+
+[data-theme="dark"] {
+  --primary: #fdf0d5;
+  --secondary: #b4a5a5;
+  --emphasis: #fa7921;
+  --background: #3c415c;
+  --backgroundEmphasis: #301b3f;
+  --mainBackground: #151515;
+}
