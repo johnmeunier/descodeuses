@@ -61,10 +61,10 @@ const data = [
   },
 ];
 
-const createTd = (type, value) => {
+const generateTd = (slot, type) => {
   const $el = document.createElement("td");
   $el.classList.add(`slot__${type}`);
-  $el.innerText = value;
+  $el.innerText = slot[type];
   return $el;
 };
 
@@ -84,9 +84,9 @@ data.forEach((slot) => {
     $slot.appendChild($date);
   }
 
-  $slot.appendChild(createTd("time", slot.time));
-  $slot.appendChild(createTd("topic", slot.topic));
-  $slot.appendChild(createTd("speaker", slot.speaker));
+  $slot.appendChild(generateTd(slot, "time"));
+  $slot.appendChild(generateTd(slot, "topic"));
+  $slot.appendChild(generateTd(slot, "speaker"));
 
   document.querySelector("tbody").appendChild($slot);
 });
